@@ -34,8 +34,8 @@
 
             view += `<div class="actions">
                         <!--Insertar aquí botones de "Añadir" y "Reset"-->
-                        <button class="new" data-my-id="${i}">new</button>
-                        <button class="reset" data-my-id="${i}">reset</button>
+                        <button class="new" id="new" data-my-id="${i}">add movie</button>
+                        <button class="reset" id ="reset" data-my-id="${i}">reset all</button>
                     </div>`;
 
             return view;
@@ -44,25 +44,25 @@
         const editView = (i, pelicula) => {
             return `<h2>Editar Película </h2>
                 <div class="field">
-                Título <br>
+                <h3>Título</h3>
                 <input  type="text" id="titulo" placeholder="Título"
                         value="${pelicula.titulo}">
                 </div>
                 <div class="field">
-                Director <br>
+                <h3>Director</h3>
                 <input  type="text" id="director" placeholder="Director"
                         value="${pelicula.director}">
                 </div>
                 <div class="field">
-                Miniatura <br>
+                <h3>Miniatura</h3>
                 <input  type="text" id="miniatura" placeholder="URL de la miniatura"
                         value="${pelicula.miniatura}">
                 </div>
                 <div class="actions">
-                    <button class="update" data-my-id="${i}">
+                    <button class="update" id="update" data-my-id="${i}">
                         Actualizar
                     </button>
-                    <button class="index">
+                    <button class="index" id="volver">
                         Volver
                     </button>
                `;
@@ -70,21 +70,21 @@
 
         const showView = (pelicula) => {
 
-            return `<h2>Editar Película </h2>
+            return `<h2>Informacion de la Película </h2>
             <div class="field">
-            Título <br>
-            <b> ${pelicula.titulo}</b>
+            <h4>Título</h4>
+            <h1> ${pelicula.titulo}</h1>
             </div>
             <div class="field">
-            Director <br>
-            <b>  ${pelicula.director}</b>
+            <h4>Director</h4>
+            <h1>  ${pelicula.director}</h1>
             </div>
             <div class="field">
-            Miniatura <br>
-            <b>${pelicula.miniatura}</b>
+            <h4>Miniatura</h4>
+            <h1>${pelicula.miniatura}</h1>
             </div>
             <div class="actions">
-                <button class="index">
+                <button class="index" id="volver">
                     Volver
                 </button>
            `;
@@ -106,8 +106,8 @@
             <input  type="text" id="miniatura" placeholder="URL de la miniatura">
             </div>
             <div class="actions">
-                <button class="create">Crear</button>
-                <button class="index">Volver</button>`;
+                <button class="create" id ="create">Crear</button>
+                <button class="index" id ="volver">Volver</button>`;
         }
 
 
