@@ -3,7 +3,8 @@
         let mis_peliculas_iniciales = [
             {titulo: "Superlópez",   director: "Javier Ruiz Caldera", "miniatura": "files/superlopez.png"},
             {titulo: "Jurassic Park", director: "Steven Spielberg", "miniatura": "files/jurassicpark.png"},
-            {titulo: "Interstellar",  director: "Christopher Nolan", "miniatura": "files/interstellar.png"}
+            {titulo: "Interstellar",  director: "Christopher Nolan", "miniatura": "files/interstellar.png"},
+            
         ];
 
         localStorage.mis_peliculas = localStorage.mis_peliculas || JSON.stringify(mis_peliculas_iniciales);
